@@ -1,0 +1,19 @@
+Execute
+{
+	Equations dXdt
+	{
+		A = 10;
+		B = 28;
+		C = 8/3;
+		dXdt[0] = A * (X[1] - X[0]);
+		dXdt[1] = X[0]* (B - X[2]) - X[1];
+		dXdt[2] = X[0]* X[1] - C * X[2];		
+	}
+				
+	Timespan = [0:0.01:100];
+	x0 = [1, 1, 1.2];
+	
+	A = euler(dXdt,Timespan,x0);
+	plot(A[0],A[2]);
+
+}

@@ -1,0 +1,15 @@
+﻿<Window x:Class="OdeSolverWPF.TableForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TableForm" Height="298" Width="756">
+    <Grid>
+        <DataGrid x:Name="Table" IsReadOnly="True">
+            <DataGrid.RowHeaderStyle>
+                <Style TargetType="DataGridRowHeader">
+                    <Setter Property="Content" Value="{Binding RowId}"/>
+                </Style>
+            </DataGrid.RowHeaderStyle>
+        </DataGrid>
+
+    </Grid>
+</Window>
